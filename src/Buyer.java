@@ -1,5 +1,5 @@
 public class Buyer extends Person {
-	private UserInfoItem userInfoItem;
+	//UserInfoItem userInfoItem;
 	private Seller seller;
 
 	private Person person;

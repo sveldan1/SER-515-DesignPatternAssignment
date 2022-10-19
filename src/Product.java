@@ -1,7 +1,37 @@
 public class Product {
+	private String category;
+	private String productName;
 
-	private Trading trading;
+	public String getCategory() {
+		return category;
+	}
 
-	private ClassProductList classProductList;
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+//private Trading trading;
+
+	@Override
+	public String toString() {
+		return "Product{" +
+				"category='" + category + '\'' +
+				", productName='" + productName + '\'' +
+				'}';
+	}
+
+	//private ClassProductList classProductList;
+
+	public Product(String Category,String ProductName){
+		this.category=Category;
+		this.productName=ProductName;
+	}
 
 }

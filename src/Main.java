@@ -5,6 +5,8 @@ public class Main {
         Facade facade=new Facade();
         try {
             if(facade.login()){
+                facade.createProductList();
+                facade.AttachProductToUser();
             System.out.println("Welcome!");
             }
             else{
