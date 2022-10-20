@@ -45,15 +45,8 @@ public class Facade {
 	}
 
 	public void createUser(UserInfoItem userinfoitem) {
-	int type_of_user=userinfoitem.getUserType();
-	if(type_of_user==0){
-		thePerson=new Buyer(userinfoitem);
-		System.out.println("Buyer created");
-	}
-	if(type_of_user==1){
-		thePerson=new Seller(userinfoitem);
-		System.out.println("Seller created");
-	}
+		thePerson=PersonFactory.createPerson(userinfoitem);
+
 	}
 
 	public void createProductList() throws IOException {
