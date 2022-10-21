@@ -1,3 +1,4 @@
+//Product is represented using product category and product name
 public class Product {
 	private String category;
 	private String productName;
@@ -13,7 +14,10 @@ public class Product {
 	public String getProductName() {
 		return productName;
 	}
-
+	public Reminder accept(NodeVisitor nodeVisitor){
+		System.out.println("Reminder is accepted in Product");
+		return nodeVisitor.visitProduct(this);
+	}
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
@@ -33,5 +37,6 @@ public class Product {
 		this.category=Category;
 		this.productName=ProductName;
 	}
+	public Product(){}
 
 }

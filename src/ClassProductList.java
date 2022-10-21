@@ -18,8 +18,10 @@ public class ClassProductList  {
 	}
 
 	public void accept(NodeVisitor visitor) {
+		System.out.println("Product list visitor");
 
 	}
+	//Based on ProductInfo.txt file, the product list containing all products is created here
 	public ClassProductList() throws IOException {
 	productlist= new ArrayList<>();
 	File productfile = new File("src/ProductInfo.txt");

@@ -1,3 +1,5 @@
+//PersonFactory extends the Person class and is used in factory method to create the person object which is either
+//buyer or seller based on the user input
 public abstract class PersonFactory extends Person{
     public static Person createPerson(UserInfoItem userInfoItem){
         System.out.println("Factory pattern initiated for person creation");

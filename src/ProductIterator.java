@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-
+// Product Iterator is used to iterate over the ClassproductList which contains the list of products
 public class ProductIterator {
 
 	private ClassProductList classProductList;

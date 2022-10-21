@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+//Facade pattern is implemented using login and visitor pattern is also implemented here
 public class Main {
     public static void main(String[] args) {
         Facade facade=new Facade();
@@ -11,6 +12,8 @@ public class Main {
                 facade.AttachProductToUser();
                 //Product product=facade.SelectProduct();
                 facade.productOperation();
+                System.out.println("Visitor Pattern is initiated");
+                facade.remind();
 
             }
             else{

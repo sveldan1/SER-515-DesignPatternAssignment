@@ -1,7 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-
+//The user inputs the username and password, they are authenticated against the BuyerInfo.txt and SellerInfo.txt
+//once logged in, the user data is collected into userInfoItem
 public class Login {
     public UserInfoItem login() throws IOException{
         Scanner scanner = new Scanner(new InputStreamReader(System.in));

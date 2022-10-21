@@ -1,3 +1,4 @@
+//UserInfoItem contains the user information, user name, password and user type : buyer or seller
 public class UserInfoItem {
     private int userType;
     private String username;

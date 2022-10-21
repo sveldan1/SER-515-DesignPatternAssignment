@@ -20,6 +20,8 @@ public class Buyer extends Person {
 	/**
 	 *  
 	 */
+	//Bridge pattern is implemented here, based on selected product by the user, either meatproductmenu
+	// or produceproductmenu  is created for the buyer
 	public ProductMenu CreateProductMenu(Product p) {
 		System.out.println("Bridge pattern initiated");
 		MeatProductMenu meatProductMenu=new MeatProductMenu();

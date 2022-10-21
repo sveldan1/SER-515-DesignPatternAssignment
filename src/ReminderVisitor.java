@@ -1,11 +1,13 @@
+//ReminderVisitor here is used to vist product and facade classes
 public class ReminderVisitor extends NodeVisitor {
 
 	private Reminder m_Reminder;
 
 	private ClassProductList classProductList;
 
-	public void visitProduct(Product product) {
-
+	public Reminder visitProduct(Product product) {
+		System.out.println("Product is visited");
+		return null;
 	}
 
 	public void visitTrading(Trading trading) {
@@ -13,7 +15,7 @@ public class ReminderVisitor extends NodeVisitor {
 	}
 
 	public void visitFacade(Facade facade) {
-
+		System.out.println("Facade is visited");
 	}
 
 }

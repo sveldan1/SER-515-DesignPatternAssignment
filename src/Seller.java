@@ -14,7 +14,8 @@ public class Seller extends Person {
 	public void showComBoxes() {
 
 	}
-
+	//Bridge pattern is implemented here, based on selected product by the user, either meatproductmenu
+	// or produceproductmenu  is created for the seller
 	public ProductMenu CreateProductMenu(Product p) {
 		System.out.println("Bridge pattern initiated");
 		String productcategory= p.getCategory();
