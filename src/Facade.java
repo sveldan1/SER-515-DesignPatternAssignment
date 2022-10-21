@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.util.Iterator;
 public class Facade {
 
 	private int UserType;
@@ -60,7 +61,7 @@ public class Facade {
 		BufferedReader bbr = new BufferedReader(new FileReader(userproductfile));
 		String pt;
 		String name=thePerson.getUserInfoItem().getUsername();
-		System.out.println(name);
+		//System.out.println(name);
 
 		while((pt=bbr.readLine())!=null) {
 			String[] Arr=pt.split(":");
@@ -78,16 +79,54 @@ public class Facade {
 			}
 
 			thePerson.setUserproducts(userProductObjects);
-			System.out.println(Arrays.toString(thePerson.userproducts.toArray()));
+			//System.out.println(Arrays.toString(thePerson.userproducts.toArray()));
 
 	}
-
-	public Product SelectProduct() {
-		return null;
-	}
-
 	public void productOperation() {
+		Product selecteduserproduct=SelectProduct();
+		ProductMenu pm = thePerson.CreateProductMenu(selecteduserproduct);
+		pm.showMenu();
+	}
+	public Product SelectProduct() {
+		System.out.println("Iterator pattern initiated");
+		System.out.println("Select product from the below");
+//		for (Product p : theProductList.getProductlist()) {
+//			System.out.println(p.getProductName());
+//			//System.out.println(Arrays.deepToString(theProductList.getProductlist().toArray()));
+//		}
+		ProductIterator productIterator1=new ProductIterator(theProductList.getProductlist());
+		while(productIterator1.hasNext()){
+			Product nextP1=productIterator1.Next();
+			System.out.println(nextP1.getProductName());
+		}
+		Scanner scanner = new Scanner(new InputStreamReader(System.in));
+		String inputProductname = scanner.nextLine();
+		Product xp=null;
+		ArrayList<String> listofproducts=new ArrayList<>();
+//		System.out.println("Iterator pattern initiated");
+//		ArrayList<String> listofproducts1=new ArrayList<>();
+//		ProductIterator productIterator=new ProductIterator(theProductList.getProductlist());
+//		while(productIterator.hasNext()){
+//			Product nextP=productIterator.Next();
+//			listofproducts1.add(nextP.getProductName());
+//		}
+//		System.out.println(listofproducts1);
+		for (Product inputProduct:theProductList.getProductlist())
+			//System.out.println(inputProduct);
+		{listofproducts.add(inputProduct.getProductName());}
+		//System.out.println(listofproducts);
+		for(Product p: theProductList.getProductlist()){
+			String productname=p.getProductName();
+			if(productname.equalsIgnoreCase(inputProductname)){
+				xp=p;
+				break;
+			}
+		}
+
+		return xp;
+}
 
 	}
 
-}
+
+

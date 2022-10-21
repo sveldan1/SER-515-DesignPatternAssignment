@@ -1,7 +1,7 @@
 public class ProduceProductMenu implements ProductMenu {
 
 	public void showMenu() {
-
+		System.out.println("This is Produce product menu");
 	}
 
 	public void showAddButton() {

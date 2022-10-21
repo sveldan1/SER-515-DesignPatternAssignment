@@ -20,8 +20,19 @@ public class Buyer extends Person {
 	/**
 	 *  
 	 */
-	public ProductMenu CreateProductMenu() {
-		return null;
+	public ProductMenu CreateProductMenu(Product p) {
+		System.out.println("Bridge pattern initiated");
+		MeatProductMenu meatProductMenu=new MeatProductMenu();
+		ProduceProductMenu produceProductMenu=new ProduceProductMenu();
+		//System.out.println("Buyer Product menu");
+		String productcategory= p.getCategory();
+			//System.out.println(productcategory);
+		if(productcategory.equalsIgnoreCase("Meat")){
+			return(meatProductMenu);
+		}
+		else{
+			return(produceProductMenu);
+		}
 	}
 
 }

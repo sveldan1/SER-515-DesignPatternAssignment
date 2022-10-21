@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-public class ClassProductList {
+public class ClassProductList  {
 
 	private ReminderVisitor reminderVisitor;
 
@@ -32,7 +32,7 @@ public class ClassProductList {
 		productlist.add(product);
 
 	}
-	System.out.println(Arrays.deepToString(productlist.toArray()));
+	//System.out.println(Arrays.deepToString(productlist.toArray()));
 	}
 
 

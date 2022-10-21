@@ -45,7 +45,7 @@ public abstract class Person implements ProductMenu {
 
 	}
 
-	public ProductMenu CreateProductMenu() {
+	public ProductMenu CreateProductMenu(Product p) {
 		return null;
 	}
 

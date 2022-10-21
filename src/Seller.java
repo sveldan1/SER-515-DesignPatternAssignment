@@ -15,8 +15,15 @@ public class Seller extends Person {
 
 	}
 
-	public ProductMenu CreateProductMenu() {
-		return null;
+	public ProductMenu CreateProductMenu(Product p) {
+		System.out.println("Bridge pattern initiated");
+		String productcategory= p.getCategory();
+		if(productcategory.equals("Meat")){
+			return(new MeatProductMenu());
+		}
+		else{
+			return(new ProduceProductMenu());
+		}
 	}
 
 }
